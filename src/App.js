@@ -31,19 +31,33 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container'>
 
-      <h1>Counter App without using createSlice</h1>
-      <h2>{counter}</h2>
-      <button onClick={Increment}>Increment</button>
-      <button onClick={Decrement}>Decrement</button>
-      <button onClick={AddBy}>Add by 10</button>
+      <div className='sectionsContainer'>
 
-      <h1>Counter App by using createSlice</h1>
-      <h2>{counter1}</h2>
-      <button onClick={sliceIncrement}>Increment</button>
-      <button onClick={sliceDecrement}>Decrement</button>
-      <button onClick={sliceAddBy}>Add by 20</button>
+        {/* Section One */}
+        <div className='section firstSection'>
+          <h1>Counter App without using createSlice</h1>
+          <h2>{counter}</h2>
+          <div className='btnsContainer'>
+            <button onClick={Increment}>Increment</button>
+            <button onClick={Decrement}>Decrement</button>
+            <button onClick={AddBy}>Add by 10</button>
+          </div>
+        </div>
+
+        {/* Section Two */}
+        <div className='section secondSection'>
+          <h1>Counter App by using createSlice</h1>
+          <h2>{counter1}</h2>
+          <div className='btnsContainer'>
+            <button onClick={sliceIncrement}>Increment</button>
+            <button onClick={sliceDecrement}>Decrement</button>
+            <button onClick={sliceAddBy}>Add by 20</button>
+          </div>
+        </div>
+
+      </div>
 
     </div>
   );
